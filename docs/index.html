@@ -87,7 +87,7 @@ svg.map text.rn{font-size:14px;font-weight:600} svg.map text.rs{font-size:11.5px
 .prow:last-child{border-bottom:0} .prow:hover .pname{color:var(--accent)}
 .pname{font-size:.86rem;color:var(--ink);white-space:nowrap}
 .ptrack{background:var(--accent-soft);height:14px;border-radius:7px;overflow:hidden}
-.pfill{display:block;height:100%;background:var(--accent);border-radius:7px;min-width:2px} .pfill.full{background:var(--done)}
+.pfill{display:block;height:100%;background:var(--accent);border-radius:7px;min-width:6px} .pfill.full{background:var(--done)}
 .pval{font-size:.84rem;color:var(--ink3);text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
 .pval b{color:var(--ink);font-weight:600} .ppct{display:inline-block;min-width:44px;margin-left:8px;color:var(--accent);font-weight:600}
 @media(max-width:760px){.prow{grid-template-columns:1fr auto} .ptrack{grid-column:1/-1;grid-row:2}}
@@ -102,14 +102,14 @@ footer{text-align:center;color:var(--ink3);font-size:.74rem;padding:18px;border-
   <div>
     <h1>mVAM Data Collection Monitoring Dashboard</h1>
     <div class="sub">El Ni&ntilde;o Awareness &amp; Impacts on Household's Food Security & Livelihood <br> Round 1 November 2026 | Fiji, Kiribati, Nauru, Samoa, Solomon Islands, Tonga, Tuvalu, Vanuatu</div>
-    <div class="meta">Last updated 27 Nov 2026, 09:52 Fiji time</div>
+    <div class="meta">Last updated 27 Nov 2026, 09:56 Fiji time</div>
   </div>
   <div class="theme" role="group" aria-label="Display mode">
     <button id="btn-light" onclick="setTheme('light')">&#9728; Light</button>
     <button id="btn-dark" onclick="setTheme('dark')">&#9790; Dark</button>
   </div>
 </header>
-<nav><button class='tab active' id='tab-overview' onclick="showTab('overview')">Overview</button><button class='tab' id='tab-Fiji' onclick="showTab('Fiji')">🇫🇯 Fiji</button><button class='tab' id='tab-Kiribati' onclick="showTab('Kiribati')">🇰🇮 Kiribati</button><button class='tab' id='tab-Nauru' onclick="showTab('Nauru')">🇳🇷 Nauru</button><button class='tab' id='tab-Samoa' onclick="showTab('Samoa')">🇼🇸 Samoa</button><button class='tab' id='tab-Solomon' onclick="showTab('Solomon')">🇸🇧 Solomon Islands</button><button class='tab' id='tab-Tonga' onclick="showTab('Tonga')">🇹🇴 Tonga</button><button class='tab' id='tab-Tuvalu' onclick="showTab('Tuvalu')">🇹🇻 Tuvalu</button><button class='tab' id='tab-Vanuatu' onclick="showTab('Vanuatu')">🇻🇺 Vanuatu</button></nav>
+<nav><button class='tab active' id='tab-overview' onclick="showTab('overview')">Overview</button><button class='tab' id='tab-Fiji' onclick="showTab('Fiji')">Fiji</button><button class='tab' id='tab-Kiribati' onclick="showTab('Kiribati')">Kiribati</button><button class='tab' id='tab-Nauru' onclick="showTab('Nauru')">Nauru</button><button class='tab' id='tab-Samoa' onclick="showTab('Samoa')">Samoa</button><button class='tab' id='tab-Solomon' onclick="showTab('Solomon')">Solomon Islands</button><button class='tab' id='tab-Tonga' onclick="showTab('Tonga')">Tonga</button><button class='tab' id='tab-Tuvalu' onclick="showTab('Tuvalu')">Tuvalu</button><button class='tab' id='tab-Vanuatu' onclick="showTab('Vanuatu')">Vanuatu</button></nav>
 
 <section class="pane" id="pane-overview">
   
@@ -126,15 +126,15 @@ footer{text-align:center;color:var(--ink3);font-size:.74rem;padding:18px;border-
   <div class="tw"><table>
     <tr><th class='l'>Country</th><th>Total calls</th><th>Answered</th><th>Not answered</th>
         <th class='hl'>Completed</th><th class='hl'>Avg. interview<br>length</th><th>Target</th><th>% of target</th><th class='barcell'>Progress</th></tr>
-    <tr class='click' onclick="showTab('Fiji')"><td class='l'>🇫🇯 Fiji</td><td>0</td><td>0</td><td>0</td><td class='hl'>0</td><td class='hl'>&mdash;</td><td>1,200</td><td>0%</td><td class='barcell'><div class="bar"><span style="width:0.0%"></span></div></td></tr><tr class='click' onclick="showTab('Kiribati')"><td class='l'>🇰🇮 Kiribati</td><td>49</td><td>38</td><td>11</td><td class='hl'>31</td><td class='hl'>25 min</td><td>400</td><td>8%</td><td class='barcell'><div class="bar"><span style="width:7.8%"></span></div></td></tr><tr class='click' onclick="showTab('Nauru')"><td class='l'>🇳🇷 Nauru</td><td>0</td><td>0</td><td>0</td><td class='hl'>0</td><td class='hl'>&mdash;</td><td>400</td><td>0%</td><td class='barcell'><div class="bar"><span style="width:0.0%"></span></div></td></tr><tr class='click' onclick="showTab('Samoa')"><td class='l'>🇼🇸 Samoa</td><td>12</td><td>9</td><td>3</td><td class='hl'>8</td><td class='hl'>41 min</td><td>1,200</td><td>1%</td><td class='barcell'><div class="bar"><span style="width:0.7%"></span></div></td></tr><tr class='click' onclick="showTab('Solomon')"><td class='l'>🇸🇧 Solomon Islands</td><td>10</td><td>7</td><td>3</td><td class='hl'>4</td><td class='hl'>54 min</td><td>400</td><td>1%</td><td class='barcell'><div class="bar"><span style="width:1.0%"></span></div></td></tr><tr class='click' onclick="showTab('Tonga')"><td class='l'>🇹🇴 Tonga</td><td>0</td><td>0</td><td>0</td><td class='hl'>0</td><td class='hl'>&mdash;</td><td>1,200</td><td>0%</td><td class='barcell'><div class="bar"><span style="width:0.0%"></span></div></td></tr><tr class='click' onclick="showTab('Tuvalu')"><td class='l'>🇹🇻 Tuvalu</td><td>0</td><td>0</td><td>0</td><td class='hl'>0</td><td class='hl'>&mdash;</td><td>400</td><td>0%</td><td class='barcell'><div class="bar"><span style="width:0.0%"></span></div></td></tr><tr class='click' onclick="showTab('Vanuatu')"><td class='l'>🇻🇺 Vanuatu</td><td>0</td><td>0</td><td>0</td><td class='hl'>0</td><td class='hl'>&mdash;</td><td>1,200</td><td>0%</td><td class='barcell'><div class="bar"><span style="width:0.0%"></span></div></td></tr><tr class='tot'><td class='l'>All countries</td><td>71</td><td>54</td><td>17</td><td class='hl'>43</td><td class='hl'>30 min</td><td>6,400</td><td>1%</td><td class='barcell'><div class="bar"><span style="width:0.7%"></span></div></td></tr>
+    <tr class='click' onclick="showTab('Fiji')"><td class='l'>Fiji</td><td>0</td><td>0</td><td>0</td><td class='hl'>0</td><td class='hl'>&mdash;</td><td>1,200</td><td>0%</td><td class='barcell'><div class="bar"><span style="width:0.0%"></span></div></td></tr><tr class='click' onclick="showTab('Kiribati')"><td class='l'>Kiribati</td><td>49</td><td>38</td><td>11</td><td class='hl'>31</td><td class='hl'>25 min</td><td>400</td><td>8%</td><td class='barcell'><div class="bar"><span style="width:7.8%"></span></div></td></tr><tr class='click' onclick="showTab('Nauru')"><td class='l'>Nauru</td><td>0</td><td>0</td><td>0</td><td class='hl'>0</td><td class='hl'>&mdash;</td><td>400</td><td>0%</td><td class='barcell'><div class="bar"><span style="width:0.0%"></span></div></td></tr><tr class='click' onclick="showTab('Samoa')"><td class='l'>Samoa</td><td>12</td><td>9</td><td>3</td><td class='hl'>8</td><td class='hl'>41 min</td><td>1,200</td><td>1%</td><td class='barcell'><div class="bar"><span style="width:0.7%"></span></div></td></tr><tr class='click' onclick="showTab('Solomon')"><td class='l'>Solomon Islands</td><td>10</td><td>7</td><td>3</td><td class='hl'>4</td><td class='hl'>54 min</td><td>400</td><td>1%</td><td class='barcell'><div class="bar"><span style="width:1.0%"></span></div></td></tr><tr class='click' onclick="showTab('Tonga')"><td class='l'>Tonga</td><td>0</td><td>0</td><td>0</td><td class='hl'>0</td><td class='hl'>&mdash;</td><td>1,200</td><td>0%</td><td class='barcell'><div class="bar"><span style="width:0.0%"></span></div></td></tr><tr class='click' onclick="showTab('Tuvalu')"><td class='l'>Tuvalu</td><td>0</td><td>0</td><td>0</td><td class='hl'>0</td><td class='hl'>&mdash;</td><td>400</td><td>0%</td><td class='barcell'><div class="bar"><span style="width:0.0%"></span></div></td></tr><tr class='click' onclick="showTab('Vanuatu')"><td class='l'>Vanuatu</td><td>0</td><td>0</td><td>0</td><td class='hl'>0</td><td class='hl'>&mdash;</td><td>1,200</td><td>0%</td><td class='barcell'><div class="bar"><span style="width:0.0%"></span></div></td></tr><tr class='tot'><td class='l'>All countries</td><td>71</td><td>54</td><td>17</td><td class='hl'>43</td><td class='hl'>30 min</td><td>6,400</td><td>1%</td><td class='barcell'><div class="bar"><span style="width:0.7%"></span></div></td></tr>
   </table></div>
   <p class="note">Avg. interview length = average of (form end &minus; form start) for completed interviews, in whole minutes.
   Click a country row or tab for its enumerator and location breakdown.</p>
   <h3>Completed calls against target</h3>
-  <div class="prog"><div class='prow' onclick="showTab('Fiji')" title='Fiji: 0 of 1,200 completed'><div class='pname'>🇫🇯 Fiji</div><div class='ptrack'><span class='pfill' style='width:0.0%'></span></div><div class='pval'><b>0</b> / 1,200<span class='ppct'>0%</span></div></div><div class='prow' onclick="showTab('Kiribati')" title='Kiribati: 31 of 400 completed'><div class='pname'>🇰🇮 Kiribati</div><div class='ptrack'><span class='pfill' style='width:7.8%'></span></div><div class='pval'><b>31</b> / 400<span class='ppct'>8%</span></div></div><div class='prow' onclick="showTab('Nauru')" title='Nauru: 0 of 400 completed'><div class='pname'>🇳🇷 Nauru</div><div class='ptrack'><span class='pfill' style='width:0.0%'></span></div><div class='pval'><b>0</b> / 400<span class='ppct'>0%</span></div></div><div class='prow' onclick="showTab('Samoa')" title='Samoa: 8 of 1,200 completed'><div class='pname'>🇼🇸 Samoa</div><div class='ptrack'><span class='pfill' style='width:0.7%'></span></div><div class='pval'><b>8</b> / 1,200<span class='ppct'>1%</span></div></div><div class='prow' onclick="showTab('Solomon')" title='Solomon Islands: 4 of 400 completed'><div class='pname'>🇸🇧 Solomon Islands</div><div class='ptrack'><span class='pfill' style='width:1.0%'></span></div><div class='pval'><b>4</b> / 400<span class='ppct'>1%</span></div></div><div class='prow' onclick="showTab('Tonga')" title='Tonga: 0 of 1,200 completed'><div class='pname'>🇹🇴 Tonga</div><div class='ptrack'><span class='pfill' style='width:0.0%'></span></div><div class='pval'><b>0</b> / 1,200<span class='ppct'>0%</span></div></div><div class='prow' onclick="showTab('Tuvalu')" title='Tuvalu: 0 of 400 completed'><div class='pname'>🇹🇻 Tuvalu</div><div class='ptrack'><span class='pfill' style='width:0.0%'></span></div><div class='pval'><b>0</b> / 400<span class='ppct'>0%</span></div></div><div class='prow' onclick="showTab('Vanuatu')" title='Vanuatu: 0 of 1,200 completed'><div class='pname'>🇻🇺 Vanuatu</div><div class='ptrack'><span class='pfill' style='width:0.0%'></span></div><div class='pval'><b>0</b> / 1,200<span class='ppct'>0%</span></div></div></div>
+  <div class="prog"><div class='prow' onclick="showTab('Fiji')" title='Fiji: 0 of 1,200 completed'><div class='pname'>Fiji</div><div class='ptrack'></div><div class='pval'><b>0</b> / 1,200<span class='ppct'>0%</span></div></div><div class='prow' onclick="showTab('Kiribati')" title='Kiribati: 31 of 400 completed'><div class='pname'>Kiribati</div><div class='ptrack'><span class='pfill' style='width:7.8%'></span></div><div class='pval'><b>31</b> / 400<span class='ppct'>8%</span></div></div><div class='prow' onclick="showTab('Nauru')" title='Nauru: 0 of 400 completed'><div class='pname'>Nauru</div><div class='ptrack'></div><div class='pval'><b>0</b> / 400<span class='ppct'>0%</span></div></div><div class='prow' onclick="showTab('Samoa')" title='Samoa: 8 of 1,200 completed'><div class='pname'>Samoa</div><div class='ptrack'><span class='pfill' style='width:0.7%'></span></div><div class='pval'><b>8</b> / 1,200<span class='ppct'>1%</span></div></div><div class='prow' onclick="showTab('Solomon')" title='Solomon Islands: 4 of 400 completed'><div class='pname'>Solomon Islands</div><div class='ptrack'><span class='pfill' style='width:1.0%'></span></div><div class='pval'><b>4</b> / 400<span class='ppct'>1%</span></div></div><div class='prow' onclick="showTab('Tonga')" title='Tonga: 0 of 1,200 completed'><div class='pname'>Tonga</div><div class='ptrack'></div><div class='pval'><b>0</b> / 1,200<span class='ppct'>0%</span></div></div><div class='prow' onclick="showTab('Tuvalu')" title='Tuvalu: 0 of 400 completed'><div class='pname'>Tuvalu</div><div class='ptrack'></div><div class='pval'><b>0</b> / 400<span class='ppct'>0%</span></div></div><div class='prow' onclick="showTab('Vanuatu')" title='Vanuatu: 0 of 1,200 completed'><div class='pname'>Vanuatu</div><div class='ptrack'></div><div class='pval'><b>0</b> / 1,200<span class='ppct'>0%</span></div></div></div>
 </section>
 <section class="pane hidden" id="pane-Fiji">
-  <h2>🇫🇯 Fiji</h2>
+  <h2>Fiji</h2>
   
     <div class="kpis">
       <div class="kpi"><div class="kpi-n">0</div><div class="kpi-l">Total calls made</div></div>
@@ -156,7 +156,7 @@ footer{text-align:center;color:var(--ink3);font-size:.74rem;padding:18px;border-
   <h3>Callbacks requested</h3><p class='empty'>No callbacks requested yet.</p>
 </section>
 <section class="pane hidden" id="pane-Kiribati">
-  <h2>🇰🇮 Kiribati</h2>
+  <h2>Kiribati</h2>
   
     <div class="kpis">
       <div class="kpi"><div class="kpi-n">49</div><div class="kpi-l">Total calls made</div></div>
@@ -178,7 +178,7 @@ footer{text-align:center;color:var(--ink3);font-size:.74rem;padding:18px;border-
   <h3>Callbacks requested</h3><p class='empty'>No callbacks requested yet.</p>
 </section>
 <section class="pane hidden" id="pane-Nauru">
-  <h2>🇳🇷 Nauru</h2>
+  <h2>Nauru</h2>
   
     <div class="kpis">
       <div class="kpi"><div class="kpi-n">0</div><div class="kpi-l">Total calls made</div></div>
@@ -200,7 +200,7 @@ footer{text-align:center;color:var(--ink3);font-size:.74rem;padding:18px;border-
   <h3>Callbacks requested</h3><p class='empty'>No callbacks requested yet.</p>
 </section>
 <section class="pane hidden" id="pane-Samoa">
-  <h2>🇼🇸 Samoa</h2>
+  <h2>Samoa</h2>
   
     <div class="kpis">
       <div class="kpi"><div class="kpi-n">12</div><div class="kpi-l">Total calls made</div></div>
@@ -222,7 +222,7 @@ footer{text-align:center;color:var(--ink3);font-size:.74rem;padding:18px;border-
   <h3>Callbacks requested</h3><p class='empty'>No callbacks requested yet.</p>
 </section>
 <section class="pane hidden" id="pane-Solomon">
-  <h2>🇸🇧 Solomon Islands</h2>
+  <h2>Solomon Islands</h2>
   
     <div class="kpis">
       <div class="kpi"><div class="kpi-n">10</div><div class="kpi-l">Total calls made</div></div>
@@ -244,7 +244,7 @@ footer{text-align:center;color:var(--ink3);font-size:.74rem;padding:18px;border-
   <h3>Callbacks requested</h3><div class='tw'><table><tr><th class='l'>Enumerator ID</th><th>Callbacks<br>requested</th><th>Callback time<br>passed</th><th>Callback time<br>still ahead</th><th>No time<br>given</th></tr><tr><td class='l'>SLB-EFS7</td><td>2</td><td class='warn'>1</td><td>1</td><td>0</td></tr><tr class='tot'><td class='l'>Total</td><td>2</td><td>1</td><td>1</td><td>0</td></tr></table></div><p class='note'>Based on the callback time recorded in the form. The form has no phone number or respondent ID, so the dashboard can't tell whether a callback was already made; use this as a follow-up list for each enumerator.</p>
 </section>
 <section class="pane hidden" id="pane-Tonga">
-  <h2>🇹🇴 Tonga</h2>
+  <h2>Tonga</h2>
   
     <div class="kpis">
       <div class="kpi"><div class="kpi-n">0</div><div class="kpi-l">Total calls made</div></div>
@@ -266,7 +266,7 @@ footer{text-align:center;color:var(--ink3);font-size:.74rem;padding:18px;border-
   <h3>Callbacks requested</h3><p class='empty'>No callbacks requested yet.</p>
 </section>
 <section class="pane hidden" id="pane-Tuvalu">
-  <h2>🇹🇻 Tuvalu</h2>
+  <h2>Tuvalu</h2>
   
     <div class="kpis">
       <div class="kpi"><div class="kpi-n">0</div><div class="kpi-l">Total calls made</div></div>
@@ -288,7 +288,7 @@ footer{text-align:center;color:var(--ink3);font-size:.74rem;padding:18px;border-
   <h3>Callbacks requested</h3><p class='empty'>No callbacks requested yet.</p>
 </section>
 <section class="pane hidden" id="pane-Vanuatu">
-  <h2>🇻🇺 Vanuatu</h2>
+  <h2>Vanuatu</h2>
   
     <div class="kpis">
       <div class="kpi"><div class="kpi-n">0</div><div class="kpi-l">Total calls made</div></div>
